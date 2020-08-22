@@ -87,29 +87,82 @@
   margin: 0;
   padding: 0;
 }
-.navigation-item {
+.navigation-item,
+.log-out {
   display: flex;
   align-items: center;
   margin-bottom: 54px;
 }
-.navigation-item div {
+.navigation-item:last-child {
+  margin-bottom: 311px;
+}
+.navigation-item div,
+.log-out-img {
   display: inline-block;
   margin-right: 17px;
-}
-.navigation-item:nth-child(1) .home-img {
-  background-image: url("../img/home.svg");
   width: 24px;
   height: 24px;
 }
-.navigation-item:nth-child(1):hover .home-img,
+.navigation-item:nth-child(1) .home-img {
+  background-image: url("../img/home.svg");
+}
 .navigation-item:nth-child(1):active .home-img {
   background-image: url("../img/b-home.svg");
 }
-.navigation-list-link {
+.navigation-item:nth-child(2) .chat-img {
+  background-image: url("../img/icon-chat.svg");
+}
+.navigation-item:nth-child(2):active .chat-img {
+  background-image: url("../img/b-chat.svg");
+}
+.navigation-item:nth-child(3) .contact-img {
+  background-image: url("../img/person.svg");
+}
+.navigation-item:nth-child(3):active .contact-img {
+  background-image: url("../img/b-person.svg");
+}
+.navigation-item:nth-child(4) .notifications-img {
+  background-image: url("../img/bell.svg");
+}
+.navigation-item:nth-child(4):active .notifications-img {
+  background-image: url("../img/b-bell.svg");
+}
+.navigation-item:nth-child(5) .calendar-img {
+  background-image: url("../img/calendar.svg");
+}
+.navigation-item:nth-child(5):active .calendar-img {
+  background-image: url("../img/b-calendar.svg");
+}
+.navigation-item:nth-child(6) .settings-img {
+  background-image: url("../img/settings.svg");
+}
+.navigation-item:nth-child(6):active .settings-img {
+  background-image: url("../img/b-settings.svg");
+}
+.navigation-list-link,
+.log-out-link {
   display: inline-block;
   text-decoration: none;
   color: #707c97;
   font-size: 16px;
   line-height: 19px;
+  font-weight: bold;
+  letter-spacing: 1px;
   text-transform: uppercase;
+}
+.navigation-item:active .navigation-list-link {
+  color: #2A8BF2;
+}
+.navigation-item:active .active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 40px;
+  box-shadow: 1px 0px 10px rgba(42, 139, 242, 0.45), 0px 0px 10px rgba(42, 139, 242, 0.55), 4px 0px 25px rgba(42, 139, 242, 0.75);
+  border-radius: 3px;
+  background: #2A8BF2;
+}
+.log-out-img {
+  background-image: url("../img/power.svg");
 }
